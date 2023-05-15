@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { LoginScreen, ForgotScreen, NurseScreen } from './pages';
 
-function App() {
+const App = () => {
+  const [loggedIn, setLoggedIn] = useState(localStorage.getItem('loggedIn') === 'true');
+
+  useEffect(() => {
+    localStorage.setItem('loggedIn', loggedIn);
+  }, [loggedIn]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/" element={<LoginScreen setLoggedIn={setLoggedIn} />} />
+          <Route path="/forgot" element={<ForgotScreen />} />
+          {loggedIn && <Route path="/nurse" element={<NurseScreen />} />}
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
