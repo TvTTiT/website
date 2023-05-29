@@ -10,7 +10,7 @@ const LoginScreen = ({ setLoggedIn }) => {
 
   const logIn = () => {
     setLoggedIn(true);
-    navigate('/nurse');
+    navigate('/nurse-home-screen');
   };
 
   const forgotScreen = () => {
@@ -41,7 +41,6 @@ const LoginScreen = ({ setLoggedIn }) => {
       <div className="form-container sign-in-container">
         <form>
           <h1>Sign in</h1>
-          <span>or use your account</span>
           <input type="email" placeholder="Email" />
           <input type="password" placeholder="Password" />
           <a href="#" onClick={forgotScreen}>Forgot your password?</a>
