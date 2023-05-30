@@ -1,5 +1,5 @@
 import React from 'react';
-import './loginScreen.css';
+import './loginStyles.css';
 import './checkBox.css';
 import { useHandleCheckboxChange ,signUp,handleSignUpClick,handleSignInClick} from './HandleLogin';
 import { useNavigate } from 'react-router-dom';

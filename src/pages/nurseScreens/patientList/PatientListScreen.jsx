@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './PatientListStyles.css';
-import Navbar from '../../navigation/nurseNavbar/Navbar';
+import './patientListStyles.css';
+import Navbar from '../../../navigation/nurseNavbar/Navbar';
 
 const PatientListScreen = () => {
   const [patients, setPatients] = useState([
@@ -193,7 +193,6 @@ const PatientListScreen = () => {
                   {sortColumn === 'email' && sortOrder === 'desc' && '▼'}
                 </th>
                 <th>Medication</th>
-                <th>Appointment</th>
               </tr>
             </thead>
             <tbody>
@@ -210,9 +209,6 @@ const PatientListScreen = () => {
                     <td>{patient.email}</td>
                     <td>
                       <button className="btn btn-primary">Medication</button>
-                    </td>
-                    <td>
-                      <button className="btn btn-primary">Appointment</button>
                     </td>
                   </tr>
                 ))

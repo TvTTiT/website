@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from '../../navigation/nurseNavbar/Navbar';
-import './nurseHomeScreen.css';
+import Navbar from '../../../navigation/nurseNavbar/Navbar';
+import './nurseHomeStyles.css';
 
 const NurseHomeScreen = () => {
   return (

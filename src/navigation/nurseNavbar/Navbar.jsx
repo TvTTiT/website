@@ -26,9 +26,9 @@ const Navbar = () => {
           <FontAwesomeIcon icon={faBell} />
           <span className="tooltip">Notifications</span>
         </li>
-        <li onClick={() => handleNavigation('/appointment-schedule')}>
+        <li onClick={() => handleNavigation('/appointment')}>
           <FontAwesomeIcon icon={faCalendar} />
-          <span className="tooltip">Appointment Schedule</span>
+          <span className="tooltip">Appointment</span>
         </li>
         <li onClick={() => handleNavigation('/messages')}>
           <FontAwesomeIcon icon={faEnvelope} />
