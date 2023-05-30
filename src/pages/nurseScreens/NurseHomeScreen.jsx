@@ -1,11 +1,12 @@
 import React from 'react';
-import Navbar from '../nurseNavbar/Navbar';
+import Navbar from '../../navigation/nurseNavbar/Navbar';
 import './nurseHomeScreen.css';
 
 const NurseHomeScreen = () => {
   return (
     <div>
       <Navbar />
+      <h2>Welcome to RoboMedic Solutions</h2>
       <div className="pill-container">
       <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
           <use href="#pill_shadow" transform="scale(.9, .3) translate(32 1150)" />
@@ -103,7 +104,6 @@ const NurseHomeScreen = () => {
         </defs>
         </svg>
         </div>
-        <h2>Welcome to RoboMedic Solutions</h2>
         <p>best patient management solution </p>
       </div>
   );

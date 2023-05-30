@@ -1,0 +1,67 @@
+/* CSS Styles */
+
+.patient-list-container {
+  padding: 20px;
+}
+
+.patient-list-title {
+  color: #fff;
+  background-color: #343a40;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.table {
+  width: 100%;
+  background-color: #343a40;
+  color: #fff;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+}
+
+.table-dark th {
+  background-color: #343a40;
+  color: #fff;
+  border-color: #454d55;
+}
+
+.table-dark td {
+  background-color: #454d55;
+}
+
+.table-dark tbody + tbody {
+  border-color: #454d55;
+}
+
+.table-dark.table-bordered {
+  border-color: #454d55;
+}
+
+.table-dark.table-bordered th,
+.table-dark.table-bordered td {
+  border-color: #454d55;
+}
+
+.table-container {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.search-bar {
+  margin-bottom: 10px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.empty-message {
+  text-align: center;
+  color: #fff;
+  padding: 12px;
+}
