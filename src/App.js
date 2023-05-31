@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { LoginScreen, ForgotScreen, NurseHomeScreen, PatientListScreen, Appointment} from './pages';
+import { LoginScreen, ForgotScreen, NurseHomeScreen, PatientListScreen, Appointment, Messages} from './pages';
 
 const App = () => {
   const [loggedIn, setLoggedIn] = useState(localStorage.getItem('loggedIn') === 'true');
@@ -19,6 +19,7 @@ const App = () => {
           {loggedIn && <Route path="/nurse-home-screen" element={<NurseHomeScreen />} />}
           <Route path="/patient-list" element={<PatientListScreen />} />
           <Route path="/appointment" element={<Appointment />} />
+          <Route path="/messages" element={<Messages />} />
         </Routes>
       </div>
     </Router>
