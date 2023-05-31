@@ -6,10 +6,17 @@
 }
 
 .patient-list-title {
-  color: #fff;
-  background-color: #343a40;
-  padding: 10px;
-  margin-bottom: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .table {
