@@ -146,7 +146,9 @@ const PatientListScreen = () => {
   return (
     <div>
       <Navbar />
-      <h2 className="patient-list-title">Patient List</h2>
+      <div className="patient-list-title">
+        <h2 className='title'>Patient List</h2>
+      </div>
       <div className="patient-list-container">
         <div className="search-bar">
             <input
