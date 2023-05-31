@@ -15,17 +15,17 @@ const Navbar = () => {
     // Implement your sign out logic here
     // For example, clear the authentication token, remove user data from local storage, etc.
     // After sign out, navigate to the sign-in page or any other desired route
-    navigate('/sign-in');
+    navigate('/');
   };
 
   return (
     <nav className="sidebar-navigation">
       <ul>
-        <li className="active" onClick={() => handleNavigation('/nurse-home-screen')}>
+        <li onClick={() => handleNavigation('/nurse-home-screen')}>
           <FontAwesomeIcon icon={faHome} />
           <span className="tooltip">Home</span>
         </li>
-        <li className="active" onClick={() => handleNavigation('/patient-list')}>
+        <li onClick={() => handleNavigation('/patient-list')}>
           <FontAwesomeIcon icon={faUsers} />
           <span className="tooltip">Patient List</span>
         </li>
