@@ -71,6 +71,7 @@ const AppointmentScreen = () => {
   return (
     <div>
       <Navbar />
+      <h2 className="appointment-title">Appointment</h2>
       <div className="appointment-container">
         <div id="calendar"></div>
         {selectedAppointment && (
