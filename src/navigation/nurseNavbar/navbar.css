@@ -79,3 +79,8 @@ body {
 .sidebar-navigation ul li.active i {
   color: #98D7EC;
 }
+.sidebar-navigation ul li:last-child {
+  position: fixed;
+  bottom: 10px; /* Adjust the bottom position as needed */
+  width: 80px;
+}
