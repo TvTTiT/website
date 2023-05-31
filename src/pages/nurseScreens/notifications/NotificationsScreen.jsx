@@ -1,35 +1,63 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './notificationsStyles.css';
 import Navbar from '../../../navigation/nurseNavbar/Navbar';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const NotificationsScreen = () => {
-  const notifications = [
-    {
-      notification_id: 1,
-      patient_id: 1,
-      medical_professional_id: 1,
-      message: 'Notification 1',
-      timestamp: new Date().toLocaleString(),
-      priority: 'high',
-      notification_type: 'type 1',
-      acknowledged: false,
-    },
-    {
-      notification_id: 2,
-      patient_id: 2,
-      medical_professional_id: 2,
-      message: 'Notification 2',
-      timestamp: new Date().toLocaleString(),
-      priority: 'medium',
-      notification_type: 'type 2',
-      acknowledged: true,
-    },
-    // Add more notifications here...
-  ];
+      const [notifications, setNotifications] = useState([
+        // Notifications data...
+        {
+            notification_id: 1,
+            patient_id: 1,
+            medical_professional_id: 1,
+            message: 'Notification 1',
+            timestamp: new Date().toLocaleString(),
+            priority: 'high',
+            notification_type: 'type 1',
+            acknowledged: false,
+          },
+          {
+            notification_id: 2,
+            patient_id: 2,
+            medical_professional_id: 2,
+            message: 'Notification 2',
+            timestamp: new Date().toLocaleString(),
+            priority: 'medium',
+            notification_type: 'type 2',
+            acknowledged: true,
+          },
+          {
+            notification_id: 3,
+            patient_id: 3,
+            medical_professional_id: 3,
+            message: 'Notification 3',
+            timestamp: new Date().toLocaleString(),
+            priority: 'high',
+            notification_type: 'type 3',
+            acknowledged: false,
+          },
+          {
+            notification_id: 4,
+            patient_id: 4,
+            medical_professional_id: 4,
+            message: 'Notification 4',
+            timestamp: new Date().toLocaleString(),
+            priority: 'low',
+            notification_type: 'type 4',
+            acknowledged: true,
+          },
+          // Add more notifications here...
+      ]);
 
-  const handleRemoveNotification = (notificationId) => {
-    // Implement logic to remove the notification from the list
-  };
+      const handleRemoveNotification = (notificationId) => {
+        // Implement logic to remove the notification from the list
+        const updatedNotifications = notifications.filter(
+          (notification) => notification.notification_id !== notificationId
+        );
+        setNotifications(updatedNotifications);
+      };
+      
 
   return (
     <div>
@@ -54,6 +82,12 @@ const NotificationsScreen = () => {
                       {notification.priority}
                     </span>
                   </div>
+                </div>
+                <div
+                  className="notification-remove"
+                  onClick={() => handleRemoveNotification(notification.notification_id)}
+                >
+                  <FontAwesomeIcon icon={faTimes} />
                 </div>
               </div>
             ))}

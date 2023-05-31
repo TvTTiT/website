@@ -105,4 +105,18 @@
     color: #fff;
   }
   
-  
+.notification-item {
+  position: relative; /* Add position: relative to the notification item */
+}
+
+.notification-remove {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  color: #888888;
+}
+
+.notification-remove:hover {
+  color: #ff6b6b;
+}
